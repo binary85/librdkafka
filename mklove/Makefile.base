@@ -115,7 +115,7 @@ else
 	rm $$_tmp)
 endif
 	cp $@ $(LIBNAME)-static-dbg.a
-	strip -d $@
+	strip -S $@
 	ranlib $@
 ifneq ($(MKL_DYNAMIC_LIBS),)
 	@printf "$(MKL_RED)WARNING:$(MKL_YELLOW) $@: The following libraries were not available as static libraries and need to be linked dynamically: $(MKL_DYNAMIC_LIBS)$(MKL_CLR_RESET)\n"
